@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/11/20.
+//  Created by Nathan Ostrowski on 5/9/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
