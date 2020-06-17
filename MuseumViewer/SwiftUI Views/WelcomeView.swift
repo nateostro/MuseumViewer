@@ -60,7 +60,7 @@ struct WelcomeView: View {
                             }
                         }
 
-                    NavigationLink(destination: LoginView()){
+                    NavigationLink(destination: RegisterView()){
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .foregroundColor(.white)
@@ -77,7 +77,7 @@ struct WelcomeView: View {
                             self.isShowingSubtitle = true
                             self.firstButtonOpacity = 1
                         }
-                    }
+                    }.accentColor(.white)
 
                     NavigationLink(destination: LoginView()){
                         ZStack {
@@ -88,7 +88,7 @@ struct WelcomeView: View {
                                 .foregroundColor(.blue)
                                 .font(.system(size: 22, weight: .regular))
                         }
-                    }
+                    }.accentColor(.white)
                     .offset(y: isShowingTitle ? 65 : 200)
                     .opacity(self.secondButtonOpacity)
                     .onAppear{

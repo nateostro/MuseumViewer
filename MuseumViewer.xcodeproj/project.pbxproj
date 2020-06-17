@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E38A2A8249A7C6F006665DE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A2A7249A7C6F006665DE /* WebView.swift */; };
 		1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016224995B52005B1085 /* WelcomeView.swift */; };
-		1EDF01682499766A005B1085 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01672499766A005B1085 /* RegisterView.swift */; };
-		1EDF016A24997677005B1085 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016924997677005B1085 /* LoginView.swift */; };
+		1EDF01682499766A005B1085 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01672499766A005B1085 /* LoginView.swift */; };
+		1EDF016A24997677005B1085 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016924997677005B1085 /* RegisterView.swift */; };
 		1EDF01742499AD27005B1085 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01732499AD27005B1085 /* ContentView.swift */; };
 		1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F3246A1C210088BF05 /* AppDelegate.swift */; };
 		1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F5246A1C210088BF05 /* SceneDelegate.swift */; };
@@ -56,9 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E38A2A7249A7C6F006665DE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1EDF016224995B52005B1085 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1EDF01672499766A005B1085 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		1EDF016924997677005B1085 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1EDF01672499766A005B1085 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1EDF016924997677005B1085 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		1EDF01732499AD27005B1085 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EECB8F0246A1C210088BF05 /* MuseumViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EECB8F3246A1C210088BF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -216,8 +218,9 @@
 				1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */,
 				1EECB940246A1DF80088BF05 /* GalleryView.swift */,
 				1EECB941246A1DF80088BF05 /* ListView.swift */,
-				1EDF01672499766A005B1085 /* RegisterView.swift */,
-				1EDF016924997677005B1085 /* LoginView.swift */,
+				1EDF01672499766A005B1085 /* LoginView.swift */,
+				1EDF016924997677005B1085 /* RegisterView.swift */,
+				1E38A2A7249A7C6F006665DE /* WebView.swift */,
 				1EDF01732499AD27005B1085 /* ContentView.swift */,
 			);
 			path = "SwiftUI Views";
@@ -367,13 +370,14 @@
 				1EECB943246A1DF80088BF05 /* ArtifactRow.swift in Sources */,
 				1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */,
 				1EDF01742499AD27005B1085 /* ContentView.swift in Sources */,
-				1EDF01682499766A005B1085 /* RegisterView.swift in Sources */,
+				1EDF01682499766A005B1085 /* LoginView.swift in Sources */,
 				1EECB945246A1DF80088BF05 /* ArtifactItem.swift in Sources */,
 				1EECB942246A1DF80088BF05 /* ArtifactDetail.swift in Sources */,
+				1E38A2A8249A7C6F006665DE /* WebView.swift in Sources */,
 				1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */,
 				1EECB93A246A1DB90088BF05 /* Artifact.swift in Sources */,
 				1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */,
-				1EDF016A24997677005B1085 /* LoginView.swift in Sources */,
+				1EDF016A24997677005B1085 /* RegisterView.swift in Sources */,
 				1EECB947246A1DF80088BF05 /* ListView.swift in Sources */,
 				1EECB939246A1DB90088BF05 /* Data.swift in Sources */,
 				1EECB946246A1DF80088BF05 /* GalleryView.swift in Sources */,
