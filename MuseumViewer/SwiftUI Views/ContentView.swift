@@ -2,33 +2,23 @@
 //  ContentView.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/9/20.
+//  Created by Nathan Ostrowski on 6/16/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    
-    var categories:[String:[Artifact]] {
-        .init(
-            grouping: artifactData,
-            by: {$0.category.rawValue}
-        )
-    }
-    
+
+    @EnvironmentObject var settings: UserSettings
+
     var body: some View {
-        NavigationView {
-            // to customize order, remove sorted
-            List(categories.keys.sorted(by: >), id: \.self){ key in
-                // add .uppercased() modifier to key in header of ArtifactRow to make uppercased.
-                ArtifactRow(categoryName: "\(key)", artifacts: self.categories[key]!)
-                    .frame(height: 320)
-                    .padding(.top)
-                    .padding(.bottom)
-            }
-        .navigationBarTitle(Text("Museum Artifacts"))
+        if settings.didAuthenticate {
+            return AnyView(ListView())
+        } else {
+            return AnyView(WelcomeView())
         }
+
     }
 }
 

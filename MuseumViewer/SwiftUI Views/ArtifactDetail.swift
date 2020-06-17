@@ -73,7 +73,6 @@ struct ArtifactDetail: View {
 }
 
 // This AR button will launch a modal view and change the modal state.
-// As with the predecessor, we'll do this using Quick Look
 
 struct ARButton : View {
     
@@ -89,24 +88,16 @@ struct ARButton : View {
             self.showingPreview.toggle()
         }
         .sheet(isPresented: $showingPreview) {
-            // Sheet content: the quick look view with a header bar containing
-            // a simple 'close' button that closes the sheet.
             VStack {
-                // Top row: button, aligned left
                 HStack {
                     Button("Close") {
-                        // Toggle the preview display off again.
-                        // Swiping down (the system gesture to dismiss a sheet)
-                        // will cause SwiftUI to toggle our state property as well.
                         self.showingPreview.toggle()
                     }
-                    // The spacer fills the space following the button, in effect
-                    // pushing the button to the leading edge of the view.
                     Spacer()
                 }
                 .padding()
                   
-                ARQuickLookView(name: self.artifact.imageName, allowScaling: self.allowsScaling)
+                ARQuickLookView(fileName: self.artifact.imageName, allowScaling: self.allowsScaling)
             }
         }
         .frame(width: 200, height: 50)

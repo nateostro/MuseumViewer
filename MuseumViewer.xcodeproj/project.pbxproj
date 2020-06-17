@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016224995B52005B1085 /* WelcomeView.swift */; };
+		1EDF01682499766A005B1085 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01672499766A005B1085 /* RegisterView.swift */; };
+		1EDF016A24997677005B1085 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016924997677005B1085 /* LoginView.swift */; };
+		1EDF01742499AD27005B1085 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01732499AD27005B1085 /* ContentView.swift */; };
 		1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F3246A1C210088BF05 /* AppDelegate.swift */; };
 		1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F5246A1C210088BF05 /* SceneDelegate.swift */; };
 		1EECB8FA246A1C230088BF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB8F9246A1C230088BF05 /* Assets.xcassets */; };
@@ -29,7 +33,7 @@
 		1EECB944246A1DF80088BF05 /* ARQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */; };
 		1EECB945246A1DF80088BF05 /* ArtifactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */; };
 		1EECB946246A1DF80088BF05 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB940246A1DF80088BF05 /* GalleryView.swift */; };
-		1EECB947246A1DF80088BF05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB941246A1DF80088BF05 /* ContentView.swift */; };
+		1EECB947246A1DF80088BF05 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB941246A1DF80088BF05 /* ListView.swift */; };
 		1EECB949246A1E3D0088BF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB948246A1E3D0088BF05 /* LaunchScreen.storyboard */; };
 		1EECB94B246A1E460088BF05 /* artifacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB94A246A1E460088BF05 /* artifacts.json */; };
 /* End PBXBuildFile section */
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EDF016224995B52005B1085 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1EDF01672499766A005B1085 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1EDF016924997677005B1085 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1EDF01732499AD27005B1085 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EECB8F0246A1C210088BF05 /* MuseumViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EECB8F3246A1C210088BF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EECB8F5246A1C210088BF05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +88,7 @@
 		1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARQuickLook.swift; sourceTree = "<group>"; };
 		1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtifactItem.swift; sourceTree = "<group>"; };
 		1EECB940246A1DF80088BF05 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		1EECB941246A1DF80088BF05 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1EECB941246A1DF80088BF05 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		1EECB948246A1E3D0088BF05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EECB94A246A1E460088BF05 /* artifacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artifacts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,11 +210,15 @@
 			isa = PBXGroup;
 			children = (
 				1EECB93C246A1DF80088BF05 /* ArtifactDetail.swift */,
+				1EDF016224995B52005B1085 /* WelcomeView.swift */,
 				1EECB93D246A1DF80088BF05 /* ArtifactRow.swift */,
 				1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */,
 				1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */,
 				1EECB940246A1DF80088BF05 /* GalleryView.swift */,
-				1EECB941246A1DF80088BF05 /* ContentView.swift */,
+				1EECB941246A1DF80088BF05 /* ListView.swift */,
+				1EDF01672499766A005B1085 /* RegisterView.swift */,
+				1EDF016924997677005B1085 /* LoginView.swift */,
+				1EDF01732499AD27005B1085 /* ContentView.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";
@@ -354,11 +366,15 @@
 			files = (
 				1EECB943246A1DF80088BF05 /* ArtifactRow.swift in Sources */,
 				1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */,
+				1EDF01742499AD27005B1085 /* ContentView.swift in Sources */,
+				1EDF01682499766A005B1085 /* RegisterView.swift in Sources */,
 				1EECB945246A1DF80088BF05 /* ArtifactItem.swift in Sources */,
 				1EECB942246A1DF80088BF05 /* ArtifactDetail.swift in Sources */,
 				1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */,
 				1EECB93A246A1DB90088BF05 /* Artifact.swift in Sources */,
-				1EECB947246A1DF80088BF05 /* ContentView.swift in Sources */,
+				1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */,
+				1EDF016A24997677005B1085 /* LoginView.swift in Sources */,
+				1EECB947246A1DF80088BF05 /* ListView.swift in Sources */,
 				1EECB939246A1DB90088BF05 /* Data.swift in Sources */,
 				1EECB946246A1DF80088BF05 /* GalleryView.swift in Sources */,
 				1EECB944246A1DF80088BF05 /* ARQuickLook.swift in Sources */,

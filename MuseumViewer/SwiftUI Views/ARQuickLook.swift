@@ -10,9 +10,9 @@ import QuickLook
 import ARKit
   
 struct ARQuickLookView: UIViewControllerRepresentable {
-    // Properties: the file name (without extension), and whether we'll let
+    // Properties: the file fileName (without extension), and whether we'll let
     // the user scale the preview content.
-    var name: String
+    var fileName: String
     var allowScaling: Bool = true
       
     func makeCoordinator() -> ARQuickLookView.Coordinator {
@@ -37,7 +37,7 @@ struct ARQuickLookView: UIViewControllerRepresentable {
     // TODO: Make this generic so that rcproject files can be used
     class Coordinator: NSObject, QLPreviewControllerDataSource {
         let parent: ARQuickLookView
-        private lazy var fileURL: URL = Bundle.main.url(forResource: parent.name,
+        private lazy var fileURL: URL = Bundle.main.url(forResource: parent.fileName,
                                                         withExtension: "usdz")!
           
         init(_ parent: ARQuickLookView) {
@@ -56,8 +56,8 @@ struct ARQuickLookView: UIViewControllerRepresentable {
             _ controller: QLPreviewController,
             previewItemAt index: Int
         ) -> QLPreviewItem {
-            guard let fileURL = Bundle.main.url(forResource: parent.name, withExtension: "usdz") else {
-                fatalError("Unable to load \(parent.name).usdz")
+            guard let fileURL = Bundle.main.url(forResource: parent.fileName, withExtension: "usdz") else {
+                fatalError("Unable to load \(parent.fileName).usdz")
             }
               
             let item = ARQuickLookPreviewItem(fileAt: fileURL)
@@ -69,6 +69,6 @@ struct ARQuickLookView: UIViewControllerRepresentable {
   
 struct ARQuickLookView_Previews: PreviewProvider {
     static var previews: some View {
-        ARQuickLookView(name: "Artifact")
+        ARQuickLookView(fileName: "Artifact")
     }
 }
