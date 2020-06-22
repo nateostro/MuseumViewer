@@ -3,15 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0DDA77249EAB8C000CA192 /* ArtifactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DDA76249EAB8C000CA192 /* ArtifactInfo.swift */; };
+		1E0DDA79249EBD2C000CA192 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DDA78249EBD2C000CA192 /* ModelView.swift */; };
+		1E3015C5249FD7B000C6C44C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3015C4249FD7B000C6C44C /* Screen.swift */; };
 		1E38A2A8249A7C6F006665DE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38A2A7249A7C6F006665DE /* WebView.swift */; };
+		1ED3A562249AFD8D0097DA03 /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED3A561249AFD8D0097DA03 /* NavigationStack */; };
+		1ED3A566249B1C8A0097DA03 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A565249B1C8A0097DA03 /* BottomSheetView.swift */; };
+		1ED3A568249B1D3B0097DA03 /* ARButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED3A567249B1D3B0097DA03 /* ARButton.swift */; };
 		1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016224995B52005B1085 /* WelcomeView.swift */; };
-		1EDF01682499766A005B1085 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01672499766A005B1085 /* LoginView.swift */; };
-		1EDF016A24997677005B1085 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF016924997677005B1085 /* RegisterView.swift */; };
 		1EDF01742499AD27005B1085 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF01732499AD27005B1085 /* ContentView.swift */; };
+		1EE3F0F724A02438003BFBBA /* (Cleveland) Egyptian Head.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3F0F624A02438003BFBBA /* (Cleveland) Egyptian Head.usdz */; };
+		1EE3F0F924A0244A003BFBBA /* (Cleveland) Greek Vase.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3F0F824A0244A003BFBBA /* (Cleveland) Greek Vase.usdz */; };
+		1EE3F0FD24A024CA003BFBBA /* (Minneapolis) Jomon Figurine.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3F0FC24A024CA003BFBBA /* (Minneapolis) Jomon Figurine.usdz */; };
+		1EE3F10124A0295E003BFBBA /* (Minneapolis) Bird Vessel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3F10024A0295E003BFBBA /* (Minneapolis) Bird Vessel.usdz */; };
 		1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F3246A1C210088BF05 /* AppDelegate.swift */; };
 		1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB8F5246A1C210088BF05 /* SceneDelegate.swift */; };
 		1EECB8FA246A1C230088BF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB8F9246A1C230088BF05 /* Assets.xcassets */; };
@@ -20,12 +28,9 @@
 		1EECB916246A1C230088BF05 /* MuseumViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB915246A1C230088BF05 /* MuseumViewerUITests.swift */; };
 		1EECB92C246A1D7D0088BF05 /* (Nasher) Two-Chambered Whistling Vessel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB924246A1D7D0088BF05 /* (Nasher) Two-Chambered Whistling Vessel.usdz */; };
 		1EECB92D246A1D7D0088BF05 /* (Nasher) Corn Vessel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB925246A1D7D0088BF05 /* (Nasher) Corn Vessel.usdz */; };
-		1EECB92E246A1D7D0088BF05 /* (Minneapolis) Menlo Castle Gates.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB926246A1D7D0088BF05 /* (Minneapolis) Menlo Castle Gates.usdz */; };
 		1EECB92F246A1D7D0088BF05 /* (Nasher) Conch Horn.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB927246A1D7D0088BF05 /* (Nasher) Conch Horn.usdz */; };
 		1EECB930246A1D7D0088BF05 /* (Nasher) Turtle Whistle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB928246A1D7D0088BF05 /* (Nasher) Turtle Whistle.usdz */; };
 		1EECB931246A1D7D0088BF05 /* (Minneapolis) Jaguar Vessel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB929246A1D7D0088BF05 /* (Minneapolis) Jaguar Vessel.usdz */; };
-		1EECB932246A1D7D0088BF05 /* (Cleveland) Egyptian Head.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB92A246A1D7D0088BF05 /* (Cleveland) Egyptian Head.usdz */; };
-		1EECB933246A1D7D0088BF05 /* (Cleveland) Greek Vase.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB92B246A1D7D0088BF05 /* (Cleveland) Greek Vase.usdz */; };
 		1EECB935246A1D880088BF05 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB934246A1D880088BF05 /* Default-568h@2x.png */; };
 		1EECB939246A1DB90088BF05 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB937246A1DB90088BF05 /* Data.swift */; };
 		1EECB93A246A1DB90088BF05 /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB938246A1DB90088BF05 /* Artifact.swift */; };
@@ -33,7 +38,6 @@
 		1EECB943246A1DF80088BF05 /* ArtifactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB93D246A1DF80088BF05 /* ArtifactRow.swift */; };
 		1EECB944246A1DF80088BF05 /* ARQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */; };
 		1EECB945246A1DF80088BF05 /* ArtifactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */; };
-		1EECB946246A1DF80088BF05 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB940246A1DF80088BF05 /* GalleryView.swift */; };
 		1EECB947246A1DF80088BF05 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECB941246A1DF80088BF05 /* ListView.swift */; };
 		1EECB949246A1E3D0088BF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB948246A1E3D0088BF05 /* LaunchScreen.storyboard */; };
 		1EECB94B246A1E460088BF05 /* artifacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EECB94A246A1E460088BF05 /* artifacts.json */; };
@@ -57,11 +61,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E0DDA76249EAB8C000CA192 /* ArtifactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactInfo.swift; sourceTree = "<group>"; };
+		1E0DDA78249EBD2C000CA192 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		1E3015C4249FD7B000C6C44C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		1E38A2A7249A7C6F006665DE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1ED3A565249B1C8A0097DA03 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		1ED3A567249B1D3B0097DA03 /* ARButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARButton.swift; sourceTree = "<group>"; };
 		1EDF016224995B52005B1085 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1EDF01672499766A005B1085 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		1EDF016924997677005B1085 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		1EDF01732499AD27005B1085 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1EE3F0F624A02438003BFBBA /* (Cleveland) Egyptian Head.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Cleveland) Egyptian Head.usdz"; sourceTree = "<group>"; };
+		1EE3F0F824A0244A003BFBBA /* (Cleveland) Greek Vase.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Cleveland) Greek Vase.usdz"; sourceTree = "<group>"; };
+		1EE3F0FC24A024CA003BFBBA /* (Minneapolis) Jomon Figurine.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Minneapolis) Jomon Figurine.usdz"; sourceTree = "<group>"; };
+		1EE3F10024A0295E003BFBBA /* (Minneapolis) Bird Vessel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Minneapolis) Bird Vessel.usdz"; sourceTree = "<group>"; };
 		1EECB8F0246A1C210088BF05 /* MuseumViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EECB8F3246A1C210088BF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EECB8F5246A1C210088BF05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,12 +87,9 @@
 		1EECB917246A1C230088BF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EECB924246A1D7D0088BF05 /* (Nasher) Two-Chambered Whistling Vessel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Nasher) Two-Chambered Whistling Vessel.usdz"; sourceTree = "<group>"; };
 		1EECB925246A1D7D0088BF05 /* (Nasher) Corn Vessel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Nasher) Corn Vessel.usdz"; sourceTree = "<group>"; };
-		1EECB926246A1D7D0088BF05 /* (Minneapolis) Menlo Castle Gates.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Minneapolis) Menlo Castle Gates.usdz"; sourceTree = "<group>"; };
 		1EECB927246A1D7D0088BF05 /* (Nasher) Conch Horn.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Nasher) Conch Horn.usdz"; sourceTree = "<group>"; };
 		1EECB928246A1D7D0088BF05 /* (Nasher) Turtle Whistle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Nasher) Turtle Whistle.usdz"; sourceTree = "<group>"; };
 		1EECB929246A1D7D0088BF05 /* (Minneapolis) Jaguar Vessel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Minneapolis) Jaguar Vessel.usdz"; sourceTree = "<group>"; };
-		1EECB92A246A1D7D0088BF05 /* (Cleveland) Egyptian Head.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Cleveland) Egyptian Head.usdz"; sourceTree = "<group>"; };
-		1EECB92B246A1D7D0088BF05 /* (Cleveland) Greek Vase.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "(Cleveland) Greek Vase.usdz"; sourceTree = "<group>"; };
 		1EECB934246A1D880088BF05 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EECB937246A1DB90088BF05 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1EECB938246A1DB90088BF05 /* Artifact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
@@ -89,7 +97,6 @@
 		1EECB93D246A1DF80088BF05 /* ArtifactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtifactRow.swift; sourceTree = "<group>"; };
 		1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARQuickLook.swift; sourceTree = "<group>"; };
 		1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtifactItem.swift; sourceTree = "<group>"; };
-		1EECB940246A1DF80088BF05 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		1EECB941246A1DF80088BF05 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		1EECB948246A1E3D0088BF05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EECB94A246A1E460088BF05 /* artifacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artifacts.json; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED3A562249AFD8D0097DA03 /* NavigationStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +197,13 @@
 			children = (
 				1EECB924246A1D7D0088BF05 /* (Nasher) Two-Chambered Whistling Vessel.usdz */,
 				1EECB925246A1D7D0088BF05 /* (Nasher) Corn Vessel.usdz */,
-				1EECB926246A1D7D0088BF05 /* (Minneapolis) Menlo Castle Gates.usdz */,
 				1EECB927246A1D7D0088BF05 /* (Nasher) Conch Horn.usdz */,
 				1EECB928246A1D7D0088BF05 /* (Nasher) Turtle Whistle.usdz */,
 				1EECB929246A1D7D0088BF05 /* (Minneapolis) Jaguar Vessel.usdz */,
-				1EECB92A246A1D7D0088BF05 /* (Cleveland) Egyptian Head.usdz */,
-				1EECB92B246A1D7D0088BF05 /* (Cleveland) Greek Vase.usdz */,
+				1EE3F0FC24A024CA003BFBBA /* (Minneapolis) Jomon Figurine.usdz */,
+				1EE3F10024A0295E003BFBBA /* (Minneapolis) Bird Vessel.usdz */,
+				1EE3F0F624A02438003BFBBA /* (Cleveland) Egyptian Head.usdz */,
+				1EE3F0F824A0244A003BFBBA /* (Cleveland) Greek Vase.usdz */,
 			);
 			path = "AR Models";
 			sourceTree = "<group>";
@@ -211,17 +220,19 @@
 		1EECB93B246A1DF80088BF05 /* SwiftUI Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EECB93C246A1DF80088BF05 /* ArtifactDetail.swift */,
-				1EDF016224995B52005B1085 /* WelcomeView.swift */,
-				1EECB93D246A1DF80088BF05 /* ArtifactRow.swift */,
-				1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */,
-				1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */,
-				1EECB940246A1DF80088BF05 /* GalleryView.swift */,
-				1EECB941246A1DF80088BF05 /* ListView.swift */,
-				1EDF01672499766A005B1085 /* LoginView.swift */,
-				1EDF016924997677005B1085 /* RegisterView.swift */,
-				1E38A2A7249A7C6F006665DE /* WebView.swift */,
 				1EDF01732499AD27005B1085 /* ContentView.swift */,
+				1EDF016224995B52005B1085 /* WelcomeView.swift */,
+				1EECB941246A1DF80088BF05 /* ListView.swift */,
+				1EECB93D246A1DF80088BF05 /* ArtifactRow.swift */,
+				1E3015C4249FD7B000C6C44C /* Screen.swift */,
+				1EECB93F246A1DF80088BF05 /* ArtifactItem.swift */,
+				1EECB93C246A1DF80088BF05 /* ArtifactDetail.swift */,
+				1E0DDA78249EBD2C000CA192 /* ModelView.swift */,
+				1E0DDA76249EAB8C000CA192 /* ArtifactInfo.swift */,
+				1EECB93E246A1DF80088BF05 /* ARQuickLook.swift */,
+				1ED3A567249B1D3B0097DA03 /* ARButton.swift */,
+				1E38A2A7249A7C6F006665DE /* WebView.swift */,
+				1ED3A565249B1C8A0097DA03 /* BottomSheetView.swift */,
 			);
 			path = "SwiftUI Views";
 			sourceTree = "<group>";
@@ -242,6 +253,9 @@
 			dependencies = (
 			);
 			name = MuseumViewer;
+			packageProductDependencies = (
+				1ED3A561249AFD8D0097DA03 /* NavigationStack */,
+			);
 			productName = MuseumViewer;
 			productReference = 1EECB8F0246A1C210088BF05 /* MuseumViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +328,9 @@
 				Base,
 			);
 			mainGroup = 1EECB8E7246A1C210088BF05;
+			packageReferences = (
+				1ED3A560249AFD8D0097DA03 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+			);
 			productRefGroup = 1EECB8F1246A1C210088BF05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,18 +347,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EECB92E246A1D7D0088BF05 /* (Minneapolis) Menlo Castle Gates.usdz in Resources */,
 				1EECB930246A1D7D0088BF05 /* (Nasher) Turtle Whistle.usdz in Resources */,
 				1EECB92D246A1D7D0088BF05 /* (Nasher) Corn Vessel.usdz in Resources */,
-				1EECB932246A1D7D0088BF05 /* (Cleveland) Egyptian Head.usdz in Resources */,
+				1EE3F0FD24A024CA003BFBBA /* (Minneapolis) Jomon Figurine.usdz in Resources */,
 				1EECB935246A1D880088BF05 /* Default-568h@2x.png in Resources */,
 				1EECB94B246A1E460088BF05 /* artifacts.json in Resources */,
-				1EECB933246A1D7D0088BF05 /* (Cleveland) Greek Vase.usdz in Resources */,
 				1EECB92F246A1D7D0088BF05 /* (Nasher) Conch Horn.usdz in Resources */,
 				1EECB931246A1D7D0088BF05 /* (Minneapolis) Jaguar Vessel.usdz in Resources */,
 				1EECB8FD246A1C230088BF05 /* Preview Assets.xcassets in Resources */,
+				1EE3F0F924A0244A003BFBBA /* (Cleveland) Greek Vase.usdz in Resources */,
+				1EE3F10124A0295E003BFBBA /* (Minneapolis) Bird Vessel.usdz in Resources */,
 				1EECB949246A1E3D0088BF05 /* LaunchScreen.storyboard in Resources */,
 				1EECB8FA246A1C230088BF05 /* Assets.xcassets in Resources */,
+				1EE3F0F724A02438003BFBBA /* (Cleveland) Egyptian Head.usdz in Resources */,
 				1EECB92C246A1D7D0088BF05 /* (Nasher) Two-Chambered Whistling Vessel.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,18 +387,20 @@
 			files = (
 				1EECB943246A1DF80088BF05 /* ArtifactRow.swift in Sources */,
 				1EECB8F4246A1C210088BF05 /* AppDelegate.swift in Sources */,
+				1ED3A568249B1D3B0097DA03 /* ARButton.swift in Sources */,
+				1E0DDA79249EBD2C000CA192 /* ModelView.swift in Sources */,
 				1EDF01742499AD27005B1085 /* ContentView.swift in Sources */,
-				1EDF01682499766A005B1085 /* LoginView.swift in Sources */,
+				1E0DDA77249EAB8C000CA192 /* ArtifactInfo.swift in Sources */,
 				1EECB945246A1DF80088BF05 /* ArtifactItem.swift in Sources */,
+				1E3015C5249FD7B000C6C44C /* Screen.swift in Sources */,
 				1EECB942246A1DF80088BF05 /* ArtifactDetail.swift in Sources */,
 				1E38A2A8249A7C6F006665DE /* WebView.swift in Sources */,
 				1EECB8F6246A1C210088BF05 /* SceneDelegate.swift in Sources */,
 				1EECB93A246A1DB90088BF05 /* Artifact.swift in Sources */,
+				1ED3A566249B1C8A0097DA03 /* BottomSheetView.swift in Sources */,
 				1EDF016324995B52005B1085 /* WelcomeView.swift in Sources */,
-				1EDF016A24997677005B1085 /* RegisterView.swift in Sources */,
 				1EECB947246A1DF80088BF05 /* ListView.swift in Sources */,
 				1EECB939246A1DB90088BF05 /* Data.swift in Sources */,
-				1EECB946246A1DF80088BF05 /* GalleryView.swift in Sources */,
 				1EECB944246A1DF80088BF05 /* ARQuickLook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1ED3A560249AFD8D0097DA03 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:biobeats/swiftui-navigation-stack.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1ED3A561249AFD8D0097DA03 /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ED3A560249AFD8D0097DA03 /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1EECB8E8246A1C210088BF05 /* Project object */;
 }

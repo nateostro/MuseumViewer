@@ -8,111 +8,114 @@
 
 import SwiftUI
 import QuickLook
+import NavigationStack
 
 struct ArtifactDetail: View {
+        
+    @State private var bottomSheetShown = true
+    @State private var isViewingInfo = false
+    @ObservedObject var webViewStateModel: WebViewStateModel = WebViewStateModel()
     
-    var artifact: Artifact
-    
-    var body: some View {
-        List{
-            VStack{
-                Image(artifact.imageName)
-                .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-                
-            VStack(alignment: .leading) {
-                
-                Text("Artifact Name:")
-                    .font(.body)
-                    .bold()
-                    .padding(.bottom, 15)
-                
-                Text(artifact.name)
-                    .font(.body)
-                    .padding(.bottom, 15)
-                    .padding(.leading, 15)
-                
-                Text("Museum:")
-                    .font(.body)
-                    .bold()
-                    .padding(.bottom, 15)
-                
-                Text(artifact.category.rawValue)
-                    .font(.body)
-                    .padding(.bottom, 15)
-                    .padding(.leading, 15)
-                
-                Text("Description:")
-                    .font(.body)
-                    .bold()
-                    .padding(.bottom, 15)
-                
-                Text(artifact.description)
-                    .font(.body)
-                    .lineLimit(nil)
-                    .lineSpacing(12)
-                    .padding(.bottom, 30)
-                    .padding(.leading, 15)
-
-                HStack {
-                    Spacer()
-                    ARButton(artifact: artifact)
-                    Spacer()
-                }.padding(.top, 20)
-                .padding(.bottom, 50)
-                
-                Text("Artifact and Model used with CC0 License from the \(artifact.category.rawValue)")
-                
-            }
-            .padding(.top)
-            .padding(.bottom)
-            }
-        .navigationBarTitle(artifact.name)
-    }
-}
-
-// This AR button will launch a modal view and change the modal state.
-
-struct ARButton : View {
-    
-    var artifact: Artifact
-    
-    // Quick Look State variable, used for modal view activated by AR Button
-    @State var showingPreview = false
-    
-    @State var allowsScaling = true
+    @State var artifact: Artifact
+    var screenRect = UIScreen.main.bounds
     
     var body: some View {
-        Button("View Model/AR"){
-            self.showingPreview.toggle()
-        }
-        .sheet(isPresented: $showingPreview) {
-            VStack {
-                HStack {
-                    Button("Close") {
-                        self.showingPreview.toggle()
-                    }
-                    Spacer()
+        Screen {
+            ZStack {
+                VStack {
+                    Color.black
+                        .edgesIgnoringSafeArea(.all)
+                    Color.white
+                        .frame(width: self.screenRect.width, height: 200, alignment: .bottom)
                 }
-                .padding()
-                  
-                ARQuickLookView(fileName: self.artifact.imageName, allowScaling: self.allowsScaling)
-            }
+                ZStack {
+                    // Artifact Model / Image
+                    if self.artifact.imageName != "" {
+                        VStack {
+                            ModelView(artifact: self.artifact)
+                                .frame(width: self.screenRect.size.width, height: 680, alignment: .bottom)
+                            Spacer()
+                        }
+                    } else {
+                        VStack{
+                            Image(self.artifact.imageName)
+                            .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            Spacer()
+                        }
+                    }
+                    
+                    // Buttons
+                    HStack(alignment: .top) {
+                        
+                        // Pop NavigationStackView
+                        PopView(destination: .root) {
+                            ZStack {
+                                Blur(style: .light).background(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [.red, .black]),
+                                      startPoint: UnitPoint(x: 0.2, y: 0.2),
+                                      endPoint: .bottomTrailing
+                                    )
+                                )
+                                
+                                Image(systemName: "arrow.left")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 26))
+                                    .shadow(radius: 4)
+                            }
+                        }.frame(width: 52, height: 52)
+                        .cornerRadius(20)
+                        .padding(.leading, 30)
+                        
+                        Spacer()
+                        
+                        // Launch AR Scene
+                        ARButton(artifact: self.artifact).padding(.trailing, 30)
+                        
+                        // Pull up info modal
+                        /*
+                        Button(action: {
+                            self.isViewingInfo.toggle()
+                        }, label: {
+                            ZStack {
+                                Blur(style: .light).opacity(0.7).background(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [.red, .black]),
+                                      startPoint: UnitPoint(x: 0.2, y: 0.2),
+                                      endPoint: .bottomTrailing
+                                    )
+                                )
+                                Image(systemName: "info.circle.fill").frame(width: 50, height: 50, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 24))
+                                    .shadow(radius: 4)
+                            }
+                        })
+                        .frame(width: 50, height: 50)
+                        .cornerRadius(20)
+                        .padding(.trailing, 30)
+                        */
+                    }.padding(.bottom, 600)
+                }
+                
+                // Artifact Info
+                if self.bottomSheetShown == true {
+                    BottomSheetView(isOpen: self.$isViewingInfo, maxHeight: 700, minHeight: 178) {
+                        ArtifactInfo(artifact: self.artifact)
+                    }.edgesIgnoringSafeArea(.all)
+                }
+                
+            }.frame(width: self.screenRect.size.width, height: self.screenRect.size.height)
+            .edgesIgnoringSafeArea(.all)
         }
-        .frame(width: 200, height: 50)
-        .foregroundColor(.white)
-        .font(.headline)
-        .background(Color.blue)
-        .cornerRadius(10)
-
     }
 }
 
 #if DEBUG
 struct ArtifactDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ArtifactDetail(artifact: artifactData[3])
+        ArtifactDetail(artifact: artifactData[1])
     }
 }
 #endif

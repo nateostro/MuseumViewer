@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct ArtifactRow: View {
     
+    @State private var isActive = false
     var categoryName: String
     var artifacts:[Artifact]
     
@@ -18,30 +20,28 @@ struct ArtifactRow: View {
         VStack(alignment: .leading) {
             
             Text(self.categoryName)
-            .font(.title)
+            .font(Font.custom("Verdana-Bold", size: 26))
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top){
                     ForEach(self.artifacts, id: \.name) { artifact in
-                        
-                        NavigationLink(destination: ArtifactDetail(artifact: artifact)){
-                        
-                            ArtifactItem(artifact: artifact)
-                                .frame(width: 170)
+                        VStack {
+                            PushView(destination: ArtifactDetail(artifact: artifact), isActive: self.$isActive) {
+                                ArtifactItem(artifact: artifact)
+                                .frame(width: 170, height: 220, alignment: .top)
                                 .padding(EdgeInsets(top:17, leading:17, bottom:17, trailing: 30))
-                        
+                            }
                         }
                     }
                 }
             }
         }
-        
     }
 }
 
 
 struct ArtifactRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArtifactRow(categoryName: "Nasher Artifacts", artifacts: artifactData)
+        ArtifactRow(categoryName: "Nasher Museum", artifacts: artifactData)
     }
 }

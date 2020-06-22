@@ -7,13 +7,16 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct ListView: View {
     
     @EnvironmentObject var settings: UserSettings
 
     @State private var isWelcoming : Bool = false
+    
     var didWelcome : Bool = true
+    var screenRect = UIScreen.main.bounds
     
     var categories:[String:[Artifact]] {
         .init(
@@ -23,16 +26,31 @@ struct ListView: View {
     }
     
     var body: some View {
-        NavigationView {
-            // to customize order, remove sorted
-            List(categories.keys.sorted(by: >), id: \.self){ key in
-                // add .uppercased() modifier to key in header of ArtifactRow to make uppercased.
-                ArtifactRow(categoryName: "\(key)", artifacts: self.categories[key]!)
-                    .frame(height: 320)
-                    .padding(.top)
-                    .padding(.bottom)
+        NavigationStackView(transitionType: .custom(.slide), easing: .easeInOut){
+            Screen {
+                VStack {
+                    Text("MUSEUM")
+                        .font(Font.custom("Verdana-Bold", size: 16))
+                        .frame(width: self.screenRect.width-35, height: 15, alignment: .leading)
+                        .foregroundColor(Color.init(#colorLiteral(red: 0.9256190658, green: 0.3188654184, blue: 0.2843726277, alpha: 1)))
+                        .padding(.top, 17)
+                    Text("artifacts")
+                        .font(Font.custom("Verdana-Bold", size: 55))
+                        .foregroundColor(.black)
+                        .frame(width: self.screenRect.width-35, height: 50, alignment: .topLeading)
+                        .padding(.top, 7)
+                    RoundedRectangle(cornerRadius: 30)
+                        .frame(width: self.screenRect.width-30, height: 3, alignment: .center)
+                        .foregroundColor(Color.black)
+                    // Note to self: to customize order, remove sorted
+                    List(self.categories.keys.sorted(by: >), id: \.self){ key in
+                        ArtifactRow(categoryName: "\(key)", artifacts: self.categories[key]!)
+                            .frame(height: 290)
+                            .padding(.top)
+                            .padding(.bottom)
+                    }
+                }
             }
-        .navigationBarTitle(Text("Museum Artifacts"))
         }
     }
 }

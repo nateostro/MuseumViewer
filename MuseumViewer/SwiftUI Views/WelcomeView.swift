@@ -24,6 +24,8 @@ struct WelcomeView: View {
     @State private var subtitleOpacity : Double = 0.0
     @State private var firstButtonOpacity : Double = 0.0
     @State private var secondButtonOpacity : Double = 0.0
+    
+    @EnvironmentObject var settings: UserSettings
 
     var body: some View {
         NavigationView {
@@ -47,10 +49,10 @@ struct WelcomeView: View {
                             }
                         }
                     
-                    Text("First, to look at Artifacts, you'll need to create a Sketchfab account")
+                    Text("The following is a collection of artifacts offered with restricted access from the Nasher Museum and with a CC0 license from Museums around the world")
                         .font(.system(size: 25, weight: .light))
                         .foregroundColor(.white)
-                        .frame(width: 250, height: 120, alignment: .top)
+                        .frame(width: 250, height: 240, alignment: .top)
                         .offset(y: isShowingSubtitle ? -150 : 0)
                         .opacity(self.subtitleOpacity)
                         .onAppear{
@@ -60,16 +62,18 @@ struct WelcomeView: View {
                             }
                         }
 
-                    NavigationLink(destination: RegisterView()){
+                    Button(action: {
+                        self.settings.didAuthenticate = true
+                    }, label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
                                 .foregroundColor(.white)
                                 .frame(width: 250, height: 55, alignment: .center)
-                            Text("Create an account")
+                            Text("Go to the artifacts")
                                 .foregroundColor(.blue)
                                 .font(.system(size: 22, weight: .regular))
                         }
-                    }
+                    })
                     .offset(y: isShowingTitle ? 50 : 100)
                     .opacity(self.firstButtonOpacity)
                     .onAppear{
@@ -78,25 +82,6 @@ struct WelcomeView: View {
                             self.firstButtonOpacity = 1
                         }
                     }.accentColor(.white)
-
-                    NavigationLink(destination: LoginView()){
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 15)
-                                .foregroundColor(.white)
-                                .frame(width: 250, height: 55, alignment: .center)
-                            Text("Already have one")
-                                .foregroundColor(.blue)
-                                .font(.system(size: 22, weight: .regular))
-                        }
-                    }.accentColor(.white)
-                    .offset(y: isShowingTitle ? 65 : 200)
-                    .opacity(self.secondButtonOpacity)
-                    .onAppear{
-                        withAnimation(Animation.easeIn(duration: 1.5).delay(4.3)){
-                            self.isShowingSubtitle = true
-                            self.secondButtonOpacity = 1
-                        }
-                    }
                 }
             }
         }

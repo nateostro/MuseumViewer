@@ -10,7 +10,8 @@ import SwiftUI
 
 struct Artifact: Hashable, Codable, Identifiable {
     
-    /* These are the different data points for a given artifact,
+    /*
+    These are the different data points for a given artifact,
         corresponding to the artifacts.json file.
      */
     
@@ -19,19 +20,15 @@ struct Artifact: Hashable, Codable, Identifiable {
     var imageName: String
     var description: String
     var category: Category
-    
-    /* The following is an enumeration for the different museums
-        housing each artifact. Each time an artifact is added, its
-        corresponding museum should also be added to this enumeration.
-     */
-    
-    //TODO: FOR STAFF: Add additional museums where necessary
+    var urlString : String
+    var civilization: String
+    var isStarred : Bool
+    var cameraPosXYZ : [Float]
         
     enum Category: String, CaseIterable, Codable, Hashable {
         case Nasher = "Nasher Museum"
-        case Cleveland = "Cleveland Museum"
-        case Minneapolis = "Minneapolis Museum"
-        case Spanish = "Spanish Museum"
+        case Cleveland = "Cleveland Museum of Art"
+        case Minneapolis = "Minneapolis Institute of Art"
     }
 }
 
