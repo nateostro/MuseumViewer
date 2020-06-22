@@ -14,7 +14,7 @@ struct ArtifactDetail: View {
         
     @State private var bottomSheetShown = true
     @State private var isViewingInfo = false
-    @ObservedObject var webViewStateModel: WebViewStateModel = WebViewStateModel()
+    @State private var isViewingWeb = false
     
     @State var artifact: Artifact
     var screenRect = UIScreen.main.bounds

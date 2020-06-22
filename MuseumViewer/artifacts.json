@@ -65,7 +65,7 @@
     "imageName" : "(Nasher) Two-Chambered Whistling Vessel",
     "description" : "Some Description Here, and it can be long and go on multiple lines and include whatever information is necessary",
     "category" : "Nasher Museum",
-    "urlString" : "",
+    "urlString" : "https://nasher.duke.edu/exhibitions/cultures-of-the-sea-art-of-the-ancient-americas/",
     "civilization" : "Chancay",
     "isStarred" : true,
     "cameraPosXYZ" : [
@@ -80,7 +80,7 @@
     "imageName" : "(Nasher) Corn Vessel",
     "description" : "Some Description Here, and it can be long and go on multiple lines and include whatever information is necessary",
     "category" : "Nasher Museum",
-    "urlString" : "",
+    "urlString" : "https://nasher.duke.edu/exhibitions/cultures-of-the-sea-art-of-the-ancient-americas/",
     "civilization" : "Mesoamerican",
     "isStarred" : false,
     "cameraPosXYZ" : [
@@ -95,7 +95,7 @@
     "imageName" : "(Nasher) Turtle Whistle",
     "description" : "Some Description Here, and it can be long and go on multiple lines and include whatever information is necessary",
     "category" : "Nasher Museum",
-    "urlString" : "",
+    "urlString" : "https://nasher.duke.edu/exhibitions/cultures-of-the-sea-art-of-the-ancient-americas/",
     "civilization" : "Mesoamerican",
     "isStarred" : false,
     "cameraPosXYZ" : [
@@ -110,7 +110,7 @@
     "imageName" : "(Nasher) Conch Horn",
     "description" : "Some Description Here, and it can be long and go on multiple lines and include whatever information is necessary",
     "category" : "Nasher Museum",
-    "urlString" : "",
+    "urlString" : "https://nasher.duke.edu/exhibitions/cultures-of-the-sea-art-of-the-ancient-americas/",
     "civilization" : "Mesoamerican",
     "isStarred" : false,
     "cameraPosXYZ" : [

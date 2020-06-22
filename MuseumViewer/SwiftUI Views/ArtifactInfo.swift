@@ -10,8 +10,11 @@ import SwiftUI
 
 struct ArtifactInfo: View {
     var artifact : Artifact
-    
     var screenRect = UIScreen.main.bounds
+
+    @State var isViewingWeb : Bool = false
+    @ObservedObject var webViewStateModel: WebViewStateModel = WebViewStateModel()
+
     
     var body: some View {
         ZStack {
@@ -27,13 +30,16 @@ struct ArtifactInfo: View {
                     Text(artifact.name)
                         .font(Font.custom("Verdana-Bold", size: 35))
                         .padding(.init(top: 15, leading: 27, bottom: 2, trailing: 0))
-                        .frame(width: screenRect.width-70, height: (artifact.name.count > 13 ? 140 : 80), alignment: .leading)
+                        .frame(width: screenRect.width-70, height: (artifact.name.count > 11 ? 140 : 80), alignment: .leading)
                         .lineLimit(2)
-                    Image(systemName: (artifact.isStarred ? "star.circle.fill" : "star.circle"))
-                        .frame(width: 30, height: 30, alignment: .trailing)
+                    Button(action: {
+                        self.isViewingWeb.toggle()
+                    }) {
+                        Image(systemName: "link.circle.fill")
                         .font(.system(size: 45))
-                        .padding(.init(top: (artifact.name.count > 13 ? 20 : 0), leading: 0, bottom: 0, trailing: 30))
                         .foregroundColor(Color.init(#colorLiteral(red: 0.9256190658, green: 0.3188654184, blue: 0.2843726277, alpha: 1)))
+                    }.frame(width: 30, height: 30, alignment: .trailing)
+                    .padding(.init(top: (artifact.name.count > 11 ? 20 : 0), leading: 0, bottom: 0, trailing: 30))
                 }.frame(width: screenRect.width)
                 ScrollView {
                     Text(artifact.description).font(Font.custom("Verdana", size: 18))
@@ -51,6 +57,9 @@ struct ArtifactInfo: View {
                 
                 Spacer()
             }
+        }.sheet(isPresented: self.$isViewingWeb) {
+                WebView(url: URL.init(string: "\(self.artifact.urlString)")!, webViewStateModel: self.webViewStateModel)
+                
         }
     }
 }

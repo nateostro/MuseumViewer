@@ -2,7 +2,6 @@
 //  BottomSheetView.swift
 //
 //  Created by Majid Jabrayilov
-//  Copyright © 2019 Majid Jabrayilov. All rights reserved.
 //
 
 /*

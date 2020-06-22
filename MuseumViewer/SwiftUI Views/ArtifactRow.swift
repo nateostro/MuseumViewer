@@ -20,7 +20,7 @@ struct ArtifactRow: View {
         VStack(alignment: .leading) {
             
             Text(self.categoryName)
-            .font(Font.custom("Verdana-Bold", size: 26))
+            .font(Font.custom("Verdana-Bold", size: 24))
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top){

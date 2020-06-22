@@ -2,8 +2,13 @@
 //  WebView.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 6/17/20, adapted from a View written by Prafulla Singh
-//
+/*
+ 
+NOTE: This code is not mine. This is a Webkit view written by Prafulla Singh.
+ 
+I have slightly adapted it to fit my purposes and design scheme, but the bulk of the work was done by the original programmer.
+ 
+ */
 
 import SwiftUI
 import WebKit

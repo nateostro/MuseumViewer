@@ -34,10 +34,10 @@ struct ListView: View {
                         .frame(width: self.screenRect.width-35, height: 15, alignment: .leading)
                         .foregroundColor(Color.init(#colorLiteral(red: 0.9256190658, green: 0.3188654184, blue: 0.2843726277, alpha: 1)))
                         .padding(.top, 17)
-                    Text("artifacts")
-                        .font(Font.custom("Verdana-Bold", size: 55))
+                    Text("Artifacts")
+                        .font(Font.custom("Verdana-Bold", size: 40))
                         .foregroundColor(.black)
-                        .frame(width: self.screenRect.width-35, height: 50, alignment: .topLeading)
+                        .frame(width: self.screenRect.width-35, height: 30, alignment: .topLeading)
                         .padding(.top, 7)
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: self.screenRect.width-30, height: 3, alignment: .center)
@@ -46,7 +46,7 @@ struct ListView: View {
                     List(self.categories.keys.sorted(by: >), id: \.self){ key in
                         ArtifactRow(categoryName: "\(key)", artifacts: self.categories[key]!)
                             .frame(height: 290)
-                            .padding(.top)
+                            .padding(.top, 8)
                             .padding(.bottom)
                     }
                 }
