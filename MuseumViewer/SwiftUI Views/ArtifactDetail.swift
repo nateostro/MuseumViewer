@@ -2,7 +2,7 @@
 //  ArtifactDetail.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/9/20.
+//  Created by Nathan Ostrowski on 6/9/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
@@ -73,7 +73,7 @@ struct ArtifactDetail: View {
                         // Launch AR Scene
                         ARButton(artifact: self.artifact).padding(.trailing, 30)
                         
-                        // Pull up info modal
+                        // Button to pull up and pin the Info/Link modal. Commented out because the same could be achieved with a gesture.
                         /*
                         Button(action: {
                             self.isViewingInfo.toggle()
@@ -99,7 +99,7 @@ struct ArtifactDetail: View {
                     }.padding(.bottom, 600)
                 }
                 
-                // Artifact Info
+                // Artifact Info Modal Sheet
                 if self.bottomSheetShown == true {
                     BottomSheetView(isOpen: self.$isViewingInfo, maxHeight: 700, minHeight: 178) {
                         ArtifactInfo(artifact: self.artifact)

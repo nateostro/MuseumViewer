@@ -2,7 +2,7 @@
 //  ArtifactItem.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/9/20.
+//  Created by Nathan Ostrowski on 6/9/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
@@ -14,19 +14,23 @@ struct ArtifactItem: View {
     
     var body: some View {
         ZStack {
+            // Artifact image, taken from Assets with the same name as the corresponding Artifact's USDZ.
             VStack(alignment: .leading, spacing: 16.0) {
                 Image(artifact.imageName)
                     .resizable()
-                    // not sure yet why the following element is necessary,
-                    // but app broke without it.
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 170, height: 170)
                     .cornerRadius(10)
                     .shadow(radius: 10)
             }
+            
+            // Artifact Plaque
             ZStack {
+                // Background Blur:
                 Blur(style: .light).cornerRadius(20).shadow(radius: 2)
+                
+                // Optional curator star:
                 if artifact.isStarred {
                     Image(systemName: "star.circle.fill")
                         .foregroundColor(Color.init(#colorLiteral(red: 0.9256190658, green: 0.3188654184, blue: 0.2843726277, alpha: 1)))
@@ -35,6 +39,8 @@ struct ArtifactItem: View {
                         .background(Circle().fill(Color.white))
                         .offset(x: 75, y: -173)
                 }
+                
+                // Artifact Culture + Name
                 VStack {
                     Text(artifact.civilization.uppercased())
                         .font(Font.custom("Verdana-Bold", size: 12))

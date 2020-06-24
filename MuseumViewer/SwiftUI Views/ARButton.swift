@@ -12,9 +12,10 @@ struct ARButton : View {
     
     var artifact: Artifact
     
-    // Quick Look State variable, used for modal view activated by AR Button
+    // Quick Look State variable, used for modal view activated by AR Button.
     @State var showingPreview = false
     
+    // Quick Look State variable, whether or not AR scene allows the artifact to change size.
     @State var allowsScaling = true
     
     var body: some View {
@@ -57,6 +58,8 @@ struct ARButton : View {
 }
 
 struct Blur: UIViewRepresentable {
+    // This achieves a similar effect to the Blur effect from UIKit, and matches the style of the item behind it.
+    
     var style: UIBlurEffect.Style = .systemMaterial
     func makeUIView(context: Context) -> UIVisualEffectView {
         return UIVisualEffectView(effect: UIBlurEffect(style: style))

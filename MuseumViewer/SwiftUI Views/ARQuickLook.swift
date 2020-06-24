@@ -2,28 +2,23 @@
 //  ARQuickLook.swift
 //  MuseumViewer
 //
-//  Adapted by Nathan Ostrowski on 5/9/20 from a file written by Daniel Jones (@danieljones)
-//
 
 import SwiftUI
 import QuickLook
 import ARKit
   
 struct ARQuickLookView: UIViewControllerRepresentable {
-    // Properties: the file fileName (without extension), and whether we'll let
-    // the user scale the preview content.
+
     var fileName: String
     var allowScaling: Bool = true
       
     func makeCoordinator() -> ARQuickLookView.Coordinator {
-        // The coordinator object implements the mechanics of dealing with
-        // the live UIKit view controller.
+        // The coordinator object will help with the mechanics of implementing a live UIKit View Controller.
         Coordinator(self)
     }
       
     func makeUIViewController(context: Context) -> QLPreviewController {
-        // Create the preview controller, and assign our Coordinator class
-        // as its data source.
+        // Further wrapping the UIKit View, I've created a controller and passed in the coordinator as its data source.
         let controller = QLPreviewController()
         controller.dataSource = context.coordinator
         return controller
@@ -31,7 +26,6 @@ struct ARQuickLookView: UIViewControllerRepresentable {
       
     func updateUIViewController(_ controller: QLPreviewController,
                                 context: Context) {
-        // nothing to do here
     }
       
     // TODO: Make this generic so that rcproject files can be used

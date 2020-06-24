@@ -13,6 +13,8 @@ struct Artifact: Hashable, Codable, Identifiable {
     /*
     These are the different data points for a given artifact,
         corresponding to the artifacts.json file.
+     
+     Note that all data fields in the JSON must be addressed in this Artifact struct in order for the generic decoder in Data.swift to remain functional.
      */
     
     var id: Int

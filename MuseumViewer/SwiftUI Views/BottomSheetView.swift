@@ -6,7 +6,7 @@
 
 /*
  
-NOTE: This code is not mine. This is a half-modal sheet view written by Majid Jabrayilov.
+NOTE: This code is not mine. This is a custom half-modal sheet view written by Majid Jabrayilov.
  
 I have slightly adapted it to fit my purposes and design scheme, but the bulk of the work was done by the original programmer.
  

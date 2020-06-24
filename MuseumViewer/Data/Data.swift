@@ -10,6 +10,7 @@ import Foundation
 
 let artifactData:[Artifact] = load("artifacts.json")
 
+// User Settings is kept for eventual use of Duke authentication
 class UserSettings: ObservableObject {
     @Published var didAuthenticate : Bool = false
 
@@ -21,7 +22,7 @@ class UserSettings: ObservableObject {
     }
 }
 
-
+// Loads generic data from JSON
 func load<T:Decodable>(_ filename:String, as type:T.Type = T.self) -> T {
     let data:Data
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

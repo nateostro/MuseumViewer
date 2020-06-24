@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// This Screen struct helps immensely with the custom NavigationStackView. It gets rid of pesky SwiftUI bugs where active pushed views may not take up the whole screen.
+
 struct Screen<Content>: View where Content: View {
     let content: () -> Content
 

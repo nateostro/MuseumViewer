@@ -10,6 +10,9 @@ import SwiftUI
 
 struct WelcomeView: View {
     
+    // This is left over from past authentication with Sketchfab, and it is
+    //   kept in because restricted access will be necessary for Nasher Artifacts
+    //   if this project grows in size.
     enum PresentedView {
         case Register
         case Login
@@ -17,18 +20,22 @@ struct WelcomeView: View {
         
     @State private var viewToPresent: PresentedView?
 
+    // Animation States:
     @State private var isShowingTitle : Bool = false
     @State private var isShowingSubtitle : Bool = false
     @State private var isShowingButtons : Bool = false
     
+    // Opacity States:
     @State private var subtitleOpacity : Double = 0.0
     @State private var firstButtonOpacity : Double = 0.0
     @State private var secondButtonOpacity : Double = 0.0
     
+    // User Settings is kept for eventual use of Duke authentication
     @EnvironmentObject var settings: UserSettings
 
     var body: some View {
         NavigationView {
+            // Background Linear Gradient for the Welcome View.
             ZStack {
                 LinearGradient(
                     gradient: Gradient(colors: [.purple, .blue]),
@@ -62,6 +69,7 @@ struct WelcomeView: View {
                             }
                         }
 
+                    // Toggling didAuthenticate changes the UserSettings EnvironmentObject and tells the root ContentView to switch to ListView.
                     Button(action: {
                         self.settings.didAuthenticate = true
                     }, label: {

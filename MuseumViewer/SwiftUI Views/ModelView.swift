@@ -13,6 +13,7 @@ struct ModelView : UIViewRepresentable {
     let artifact : Artifact
     let scene : SCNScene
     
+    // This ensures that the scene only loads when the ArtifactItem is pressed and the DetailView loads.
     init(artifact: Artifact){
         self.artifact = artifact
         guard let url = Bundle.main.url(forResource: artifact.imageName, withExtension: "usdz") else { fatalError() }
@@ -21,6 +22,7 @@ struct ModelView : UIViewRepresentable {
         addAnimation(node: self.scene.rootNode)
     }
     
+    // This makes the artifact spin slowly to maximize its 3D effect.
     func addAnimation(node: SCNNode) {
         let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 15.0)
         let repeatForever = SCNAction.repeatForever(rotateOne)
@@ -29,33 +31,34 @@ struct ModelView : UIViewRepresentable {
 
     func makeUIView(context: Context) -> SCNView {
         
-        // 2: Add camera node
+        // Adds camera node
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         
-        // 3: Place camera
+        // Places camera
         cameraNode.position = SCNVector3(
             x: artifact.cameraPosXYZ[0],
             y: artifact.cameraPosXYZ[1],
             z: artifact.cameraPosXYZ[2]
         )
-        // 4: Set camera on scene
+        
+        // Sets camera on scene
         scene.rootNode.addChildNode(cameraNode)
                 
-        // 5: Adding light to scene
+        // Adds directional light to scene
         let spotLight = SCNNode()
         spotLight.light = SCNLight()
         spotLight.light?.type = .directional
         scene.rootNode.addChildNode(spotLight)
                 
-        // 6: Creating and adding ambient light to scene
+        // Creates and adds ambient light to scene
         let ambientLightNode = SCNNode()
         ambientLightNode.light = SCNLight()
         ambientLightNode.light?.type = .ambient
         ambientLightNode.light?.color = UIColor.white
         scene.rootNode.addChildNode(ambientLightNode)
                 
-        // retrieve the SCNView
+        // Retrieves and returns the SCNView
         let scnView = SCNView()
         scnView.scene = scene
         return scnView
@@ -66,13 +69,13 @@ struct ModelView : UIViewRepresentable {
         
         scnView.cameraControlConfiguration.allowsTranslation = false
 
-        // allows the user to manipulate the camera
+        // Allows the user to manipulate the camera
         scnView.allowsCameraControl = true
 
-        // show statistics such as fps and timing information
+        // Show statistics such as fps and timing information
         scnView.showsStatistics = false
 
-        // configure the view
+        // Configure the view
         scnView.backgroundColor = UIColor.black
     }
 }

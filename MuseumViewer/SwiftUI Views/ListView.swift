@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/9/20.
+//  Created by Nathan Ostrowski on 6/9/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import NavigationStack
 
 struct ListView: View {
     
+    // User Settings is kept for eventual use of Duke authentication
     @EnvironmentObject var settings: UserSettings
 
-    @State private var isWelcoming : Bool = false
-    
-    var didWelcome : Bool = true
+    // For using exact bounds of screen
     var screenRect = UIScreen.main.bounds
     
+    // Creates categories from artifact.json category strings
     var categories:[String:[Artifact]] {
         .init(
             grouping: artifactData,
@@ -26,9 +26,11 @@ struct ListView: View {
     }
     
     var body: some View {
+        // This is a custom NavigationStackView from the dependency NavigationStack that allows much more control of Navigation (and especially the Navigation Bar)
         NavigationStackView(transitionType: .custom(.slide), easing: .easeInOut){
             Screen {
                 VStack {
+                    // Header
                     Text("MUSEUM")
                         .font(Font.custom("Verdana-Bold", size: 16))
                         .frame(width: self.screenRect.width-35, height: 15, alignment: .leading)
@@ -42,7 +44,9 @@ struct ListView: View {
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: self.screenRect.width-30, height: 3, alignment: .center)
                         .foregroundColor(Color.black)
-                    // Note to self: to customize order, remove sorted
+                    
+                    // List
+                    // Note to self: to customize order, change sorted
                     List(self.categories.keys.sorted(by: >), id: \.self){ key in
                         ArtifactRow(categoryName: "\(key)", artifacts: self.categories[key]!)
                             .frame(height: 290)

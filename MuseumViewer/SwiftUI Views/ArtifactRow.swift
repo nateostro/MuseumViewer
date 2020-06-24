@@ -2,7 +2,7 @@
 //  ArtifactRow.swift
 //  MuseumViewer
 //
-//  Created by Nathan Ostrowski on 5/9/20.
+//  Created by Nathan Ostrowski on 6/9/20.
 //  Copyright © 2020 Nathan Ostrowski. All rights reserved.
 //
 
@@ -11,17 +11,24 @@ import NavigationStack
 
 struct ArtifactRow: View {
     
+    // Necessary for custom NavigationStack, toggles when the user taps on an ArtifactItem and launches a DetailView.
     @State private var isActive = false
+    
+    // This will be the same category/Museum for all items in the ArtifactRow. It is passed in from ListView.
     var categoryName: String
+    
+    // All the artifacts in question, also passed in from ListView.
     var artifacts:[Artifact]
     
     var body: some View {
         
         VStack(alignment: .leading) {
             
+            // Category/Museum Header
             Text(self.categoryName)
             .font(Font.custom("Verdana-Bold", size: 24))
             
+            // Row of ArtifactItems
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top){
                     ForEach(self.artifacts, id: \.name) { artifact in
